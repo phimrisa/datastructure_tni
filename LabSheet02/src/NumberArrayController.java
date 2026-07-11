@@ -19,7 +19,8 @@ public class NumberArrayController {
 		System.out.println(message);
 		
 		/*
-		 * for-each: for (data : arrays) {
+		 * For-each syntax: 
+		 * for (data : arrays) {
 		 *		-- Data
 		 * }
 		*/
