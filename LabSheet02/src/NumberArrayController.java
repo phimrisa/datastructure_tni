@@ -29,15 +29,17 @@ public class NumberArrayController {
 		
 		for (int num : nums) {
 			/*
+			 * Using "if":
 			 * if (first_element == false) {
-			 * 		System.out.print(", " );
+			 * System.out.print(", " );
 			 * }
 			*/
 			
-			// Use the conditional operator --> Condition ? true result : false result
-			
-			// System.out.print((first_element == false ? ", " : "") + num); *Not recommended!
-			
+			/*
+			 * Using "conditional operator": 
+			 * Syntax: Condition ? true result : false result
+			 * System.out.print((first_element == false ? ", " : "") + num); Note: Not recommended!!
+			*/
 			System.out.print((!first_element ? ", " : "") + num); 
 			first_element = false;
 		}
