@@ -13,7 +13,8 @@ public class Ex01 {
 		System.out.println("\nDisplay all elements:");
 		
 		/*
-		 * for-each: for (data : arrays) {
+		 * For-each syntax: 
+		 * for (data : arrays) {
 		 *		-- Data
 		 * }
 		*/
@@ -22,15 +23,18 @@ public class Ex01 {
 		
 		for (int num : nums) {
 			/*
+			 * Use "if":
 			 * if (first_element == false) {
 			 * System.out.print(", " );
 			 * }
 			*/
 			
-			// Use the conditional operator --> Condition ? true result : false result
-			
-			// System.out.print((first_element == false ? ", " : "") + num); *Not recommended!
-			
+			/*
+			 * Use "Conditional operator": 
+			 * Syntax: Condition ? true result : false result
+			 * System.out.print((first_element == false ? ", " : "") + num); Note: Not recommended!!
+			*/
+
 			System.out.print((!first_element ? ", " : "") + num); 
 			first_element = false;
 		}
