@@ -17,7 +17,7 @@ public class Lab201 {
 		System.out.println("Length = " + names.size());
 		
 		// Display all the elements.
-		Sys​tem.out.print("All names in ArrayList = " + names);
+		Sys​tem.out.print("All names in ArrayList = " + names); 
 
 	}
 
