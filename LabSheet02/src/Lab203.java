@@ -53,6 +53,7 @@ public class Lab203 {
 		for (int i=0; i<subjects.length; i++) { 
 			 new_subject[i] = subjects[i];
 			}
+		
 		return new_subject;
 		
 	}
