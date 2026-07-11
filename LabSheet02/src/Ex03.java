@@ -8,7 +8,7 @@ public class Ex03 {
 
 		int[] new_nums = new int[nums.getNums().length+1];
 		
-		//Copy all elements from nums to new_nums.
+		// Copy all elements from nums to new_nums.
 		for (int i=0; i<nums.getNums().length; i++) {
 			new_nums[i] = nums.getNums()[i];
 		}
