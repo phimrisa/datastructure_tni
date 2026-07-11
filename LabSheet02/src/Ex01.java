@@ -23,14 +23,14 @@ public class Ex01 {
 		
 		for (int num : nums) {
 			/*
-			 * Use "if":
+			 * Using "if":
 			 * if (first_element == false) {
 			 * System.out.print(", " );
 			 * }
 			*/
 			
 			/*
-			 * Use "Conditional operator": 
+			 * Using "conditional operator": 
 			 * Syntax: Condition ? true result : false result
 			 * System.out.print((first_element == false ? ", " : "") + num); Note: Not recommended!!
 			*/
