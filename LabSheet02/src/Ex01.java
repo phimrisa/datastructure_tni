@@ -34,7 +34,6 @@ public class Ex01 {
 			 * Syntax: Condition ? true result : false result
 			 * System.out.print((first_element == false ? ", " : "") + num); Note: Not recommended!!
 			*/
-
 			System.out.print((!first_element ? ", " : "") + num); 
 			first_element = false;
 		}
