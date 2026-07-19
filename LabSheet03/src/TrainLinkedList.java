@@ -18,7 +18,7 @@ public class TrainLinkedList {
         System.out.println("All Station   : " + greeline.traversal());
         
         // 5. Add Rachakru between Ari and Sanam-Pao.
-        greeline.insert(2,"Rachakru");
+        greeline.insert(2, "Rachakru");
         
         // 6. Show all stations.
         System.out.println("All Station   : " + greeline.traversal());
