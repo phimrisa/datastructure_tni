@@ -31,7 +31,7 @@ public class NumberLinkedList {
 		
 		System.out.println(numbers.length());
 		
-		System.out.println(numbers.get(0));
+		System.out.println(numbers.get(1));
 		
 		numbers.set(1, 100);
 		System.out.println(numbers.traversal());
