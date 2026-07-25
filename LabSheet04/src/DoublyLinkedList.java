@@ -7,26 +7,33 @@ public class DoublyLinkedList {
 	
 	// Default Constructor
 	public DoublyLinkedList () {
+		
 		this.head = null;
 		this.tail = null;
+		
 	}
 	
 	// Method for traverse all nodes
 	public String traversal() {
+		
 		Node current_node = head;
 		String result = "[";
 		boolean first = true;
+		
 		while (current_node != null) {
 			result += (!first ? ", " : "") + current_node.data;
 			current_node = current_node.next;
 			first = false;
 		}
+		
 		result += "]";
 		return result;
+		
 	}
 
 	// Method for inserting at the end of list
 	public void insert(Object value) {
+		
 		// Create a new node.
 		Node new_node = new Node(value);
 		
@@ -39,10 +46,12 @@ public class DoublyLinkedList {
 			new_node.previous = tail;
 			tail = new_node;
 		}
+		
 	}
 	
 	// Method for inserting at the beginning and specific position
 	public void insert(int position, Object value) {
+		
 		// Create a new node.
 		Node new_node = new Node(value);
 				
@@ -58,6 +67,7 @@ public class DoublyLinkedList {
 			// Write the code to insert at the specific position.
 			Node current_node = head;
 			int current_position = 0;
+			
 			while (current_node != null && current_position < position) {
 				current_node = current_node.next;
 				current_position++;
@@ -67,24 +77,41 @@ public class DoublyLinkedList {
 			new_node.next = current_node.next;
 			current_node.next.previous = new_node;
 			current_node.next = new_node;
+			
 		}
+		
 	}
 
+	// No.3.1
 	// Method for deleting the last node
 	public void remove() {
+		
 		if (head != null) {  // check if the list is NOT empty list
+			
 			if (head.next == null) {  // check if the list has only 1 node
 				head = null;
 				tail = null;
 			} else {
 				// write statement for deleting the last node
 				
+				// Set the current node at the tail.
+				Node current_node = tail;
+				
+				// Set tail to the previous of current node.
+				tail = current_node.previous;
+				
+				// Update the next of tail as null.
+				current_node.previous.next = null;
 			}
+			
 		}
+		
 	}
 	
+	// No.3.2
 	// Method for deleting at the beginning and specific position
 	public void remove(int position) {
+		
 		if (head != null) {  // check if the list is NOT empty list
 			if (head.next == null) {  // check if the list has only 1 node
 				head = null;
@@ -92,25 +119,51 @@ public class DoublyLinkedList {
 			} else if (position == 0) {
 				// write statement for deleting the beginning
 				
+				Node current_node = head;
+				
+				// Set head to the next node.
+				head = current_node.next;
+				
+				// Update the previous of head as null.
+				current_node.next.previous = null;
+				
 			} else {
 				// write statement for deleting the specific position
 				
+				Node current_node = head;
+				int current_position = 0;
+				
+				while (current_node != null && current_position < position) {
+					current_node = current_node.next;
+					current_position++;
+				}
+				
+				current_node.next.previous = current_node.previous;
+				current_node.previous.next = current_node.next;
+		
 			}
+			
 		}
+		
 	}
 
+	// No.5.1
 	// Method for a backward traversal (from the last node to the first node)
 	public String backwardTraversal() {
+		
 		Node current_node = tail;
 		String result = "[";
 		boolean first = true;
+		
 		while (current_node != null) {
 			result += (!first ? ", " : "") + current_node.data;
 			current_node = current_node.previous;
 			first = false;
 		}
+		
 		result += "]";
 		return result;
+		
 	}
 	
 }
