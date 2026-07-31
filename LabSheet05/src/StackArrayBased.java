@@ -1,0 +1,80 @@
+public class StackArrayBased {
+	
+   private int[] stacks;  // array to store elements
+   private final int MAX_STACK = 50; // maximum size of stack
+   private int top;   // index of the top element
+   
+   // create an empty stack with a maximum size
+   public StackArrayBased() {
+      stacks = new int[MAX_STACK];
+      top = -1;
+   }
+   
+   // create an empty stack with a specific size
+   public StackArrayBased(int capacity) {
+      stacks = new int[capacity];
+      top = -1;
+   }
+   
+   public boolean isEmpty() {
+
+	   /*
+	   if (top == -1) {
+		   return true;
+	   }
+	   return false;
+	   */
+	   
+	   return top == -1;
+	   
+   }
+   
+   public boolean isFull() {
+	   
+	   // return top == MAX_STACK - 1; --> The top element's index is 49.
+	   
+	   return top == stacks.length-1;
+	   
+   }
+   
+   public boolean push(int new_element) {
+	   
+	   if (!isFull()) {
+		   /*
+		   top++;
+		   stacks[top] = new_element;
+		   */
+		   stacks[++top] = new_element;
+		   return true;
+	   }
+	   return false;
+	   
+   }
+   
+   public int peek() {
+	   
+	   if (!isEmpty()) {
+		   return stacks[top]; 
+	   }
+	   return -9999;
+	   
+   }
+   
+   public int pop() {
+	   
+	   if (!isEmpty()) {
+		   return stacks[top--];
+	   }
+	   return -1;
+	   
+   }
+   
+   public void popAll() {
+	   
+	   // Reset to default.
+	   stacks = new int[MAX_STACK];
+	   top = -1;
+	   
+   }
+   
+}
