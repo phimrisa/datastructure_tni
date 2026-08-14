@@ -82,7 +82,7 @@ public class SinglyLinkedList {
 		Node current_node = head;
 		int current_position = 0;
 		
-		while(current_node != null && current_position < position) {
+		while (current_node != null && current_position < position) {
 			
 			current_node = current_node.next;
 			current_position++;
@@ -105,7 +105,7 @@ public class SinglyLinkedList {
 		Node current_node = head;
 		int current_position = 0;
 		
-		while(current_node != null && current_position < position) {
+		while (current_node != null && current_position < position) {
 			
 			current_node = current_node.next;
 			current_position++;
@@ -132,9 +132,9 @@ public class SinglyLinkedList {
 		Node current_node = head;
 		
 		// If there is a value return true, if not return false.
-		while(current_node != null) {
+		while (current_node != null) {
 			
-			if(value == current_node.data) {
+			if (value == current_node.data) {
 				
 				return true;
 				
@@ -151,15 +151,14 @@ public class SinglyLinkedList {
 	public void addAll(SinglyLinkedList otherlist) {
 		
 		// If both lists is not empty, then the value will be from the both of them.
-		if(!isEmpty() && !otherlist.isEmpty()) {
+		if (!isEmpty() && !otherlist.isEmpty()) {
 			
 			tail.next = otherlist.head;
 			tail = otherlist.tail;
 			
 		}
 		
-		//
-		if(isEmpty()) {
+		if (isEmpty()) {
 			
 			head = otherlist.head;
 			tail = otherlist.tail;
