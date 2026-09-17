@@ -239,8 +239,6 @@ public class BinaryTree {
 					
 				} // End of if().
 				
-				
-				
 			} // End of for().
 			
 		} // End of while().
