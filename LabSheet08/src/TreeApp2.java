@@ -11,7 +11,6 @@ public class TreeApp2 {
 		tree4.createTree4();
 		tree4.printTree(tree4.getRoot(), 0);
 		
-		
 		// Binary Tree 5
 		System.out.println("-------------------------------");
 		System.out.println("Binary Tree from createTree5()");
